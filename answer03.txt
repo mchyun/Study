@@ -1,0 +1,4 @@
+SELECT p.ID, p.Name, v.Date AS value_date, v.Value AS value, MAX(v.Date)
+FROM Portfolio AS p
+INNER JOIN PortfolioValue AS v ON p.ID = v.PortfolioID
+GROUP BY p.ID
